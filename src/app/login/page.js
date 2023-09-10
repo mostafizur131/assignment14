@@ -37,7 +37,7 @@ const Login = () => {
         onSubmit={handleSubmit}
         className="flex flex-col w-full max-w-lg p-12 rounded shadow-lg text-gray-100"
       >
-        <label for="email" className="self-start text-xs font-semibold">
+        <label htmlFor="email" className="self-start text-xs font-semibold">
           Email
         </label>
         <input
@@ -48,7 +48,10 @@ const Login = () => {
           value={formValues.email}
           className="flex items-center h-12 px-4 mt-2 rounded focus:outline-none focus:ri text-gray-900 focus:border-rose-500 focus:ri"
         />
-        <label for="password" className="self-start mt-3 text-xs font-semibold">
+        <label
+          htmlFor="password"
+          className="self-start mt-3 text-xs font-semibold"
+        >
           Password
         </label>
         <input
@@ -66,12 +69,10 @@ const Login = () => {
           Login
         </button>
         <div className="flex justify-center mt-6 space-x-2 text-xs">
-          <Link href="/signup" className="text-gray-400">
-            Forgot Password?
-          </Link>
+          <p className="text-gray-400">Don`t have an account yet?</p>
           <span className="text-gray-400">/</span>
-          <Link href="/signup" className="text-gray-400">
-            Sign Up
+          <Link href="/register" className="text-gray-400">
+            Register
           </Link>
         </div>
       </form>

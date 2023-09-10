@@ -14,7 +14,7 @@ const Header = () => {
   };
   return (
     <header className="p-4 bg-gray-800 text-gray-100">
-      <div className="container flex justify-between h-16 mx-auto">
+      <div className="container flex justify-between items-center h-16 mx-auto">
         <Link href="/" className="flex items-center p-2">
           Assignment 14
         </Link>
@@ -39,6 +39,15 @@ const Header = () => {
         </ul>
         <div>
           <ul className="items-center flex-shrink-0 hidden lg:flex justify-between">
+            <li className="flex ">
+              <Link
+                href={"/register"}
+                className="flex items-center px-4 -mb-1 text-violet-400 "
+                replace
+              >
+                Register
+              </Link>
+            </li>
             <li className="flex ">
               <Link
                 href={"/login"}
