@@ -10,12 +10,12 @@ export async function GET(req, res) {
   //Create email transporter
 
   let transporter = nodemailer.createTransport({
-    host: "mail.teamrabbil.com",
-    port: 25,
+    host: "mail.kitchenasset.com",
+    port: 26,
     secure: false,
     auth: {
-      user: "info@teamrabbil.com",
-      pass: "~sR4[bhaC[Qs",
+      user: "info@kitchenasset.com",
+      pass: "pL&zeIGf[eYb",
     },
     tls: {
       rejectUnauthorized: false,
@@ -25,7 +25,7 @@ export async function GET(req, res) {
   //prepare email
 
   let myEmail = {
-    from: "info@teamrabbil.com",
+    from: "info@kitchenasset.com",
     to: toEmail,
     subject: "Sending Email by nodemailer",
     text: "Test Email",
