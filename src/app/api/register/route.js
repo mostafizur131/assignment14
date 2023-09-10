@@ -1,3 +1,4 @@
+import { TokenCookie } from "@/app/utility/TokenCookie";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import smtpTransport from "nodemailer-smtp-transport";
@@ -38,10 +39,11 @@ export async function POST(req) {
   };
 
   try {
+    let Cookie = await TokenCookie(email);
     let result = await transporter.sendMail(mailOptions);
     return NextResponse.json(
       { status: true, msg: "Email sent successfully" },
-      { status: 200 }
+      { status: 200, headers: Cookie }
     );
   } catch (e) {
     return NextResponse.json(
